@@ -9,7 +9,7 @@ const Nav = (props) => {
         <a href="#">
           <li>About</li>
         </a>
-        <a href="#">
+        <a href="#gallery">
           <li>Work</li>
         </a>
         <a href="#">

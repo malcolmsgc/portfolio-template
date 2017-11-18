@@ -83,6 +83,26 @@ h1 {
   font-size: 5em;
   margin: 0.2em; }
 
+.gallery-item figure {
+  max-width: 32%;
+  overflow: hidden; }
+
+.gallery-item figure img {
+  width: 100%;
+  height: 100%; }
+
+.gallery-item figcaption {
+  background-color: rgba(242, 242, 242, 0.8); }
+
+.gallery-item figcaption h4 {
+  font-size: 1.8em; }
+
+.gallery-item figcaption p {
+  font-size: 1.4em; }
+
+h2, h3, h4 {
+  font-family: "Reem Kufi", sans-serif; }
+
 @media screen and (max-width: 650px) {
   header img {
     max-width: 100vw; } }
