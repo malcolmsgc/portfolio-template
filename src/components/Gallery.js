@@ -8,7 +8,7 @@ const Gallery = (props) => {
                 (item, i) => {
                     const { title, src, caption, url } = item;
                     return (
-                        <GalleryItem key={i} title={title} src={src} caption={caption} />
+                        <GalleryItem key={i} title={title} src={src} caption={caption} url={url} />
                     );
                 }
             )}
