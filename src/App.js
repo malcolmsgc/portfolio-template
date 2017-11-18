@@ -22,7 +22,7 @@ class App extends Component {
       },
       gallery : [
         {title: "Pomodoro Timer", src : "", url : "https://twitter.com/MalcolmCumming", caption: "captions are great"},
-        {title: "Tic Tac Toe Game", src : "", url : "#", caption: "captions are great"},
+        {title: "Tic Tac Toe Game", src : "", url : "#", caption: "captions are great captions are great captions are great captions are great captions are great captions are great captions are great captions are great"},
         {title: "Wikipedia Viewer", src : "", url : "#", caption: "captions are great"},
         {title: "Simon Game", src : "", url : "#", caption: "captions are great"},
         {title: "Calculator", src : "", url : "#", caption: "captions are great"},

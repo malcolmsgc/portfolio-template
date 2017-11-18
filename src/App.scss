@@ -4,6 +4,7 @@
 $font1: 'Reem Kufi', sans-serif;
 $color1: rgb(107, 52, 45);
 $color2: #F2C94C;
+$accent-dark: #5C150B;
 // END VARS
 
 * {
@@ -33,6 +34,7 @@ header {
     div:first-of-type {
         background: #fff;
         flex: 1 1 35vw;
+        padding-left: 0px;
     }
     p {
         font-size: 1.4em;
@@ -52,6 +54,7 @@ nav {
     background-color: $color2;
     font-size: 3.2em;
     padding: 0.5rem;
+    min-height: 60px;
     display: flex;
     justify-content: space-between;
     ul {
@@ -69,10 +72,13 @@ nav {
 
 .nav-list {
     a:first-of-type {
-        margin-left: 0;
+        margin-left: 5px;
     }
     a {
         margin: 0 10px;
+        &:hover {
+            color: $accent-dark;
+          }
     }
 }
 
@@ -87,7 +93,7 @@ nav {
       width: 40px;
       height: 40px;
       &:hover {
-        background-color: $color1;
+        background-color: $accent-dark;
       }
   }
   li {
@@ -124,14 +130,27 @@ h1 {
     width: 350px;
     margin: 20px;
 
+    a {
+        text-decoration: none;
+        color: #000;
+        &:hover {
+            color: $accent-dark;
+        }
+    }
+
     figure{
         overflow: hidden;
+        margin: 0;
         img {
             width: 100%;
             height: 100%;
         }
     }
     figcaption {
+        margin: 0;
+        padding: 10px;
+        position: relative;
+        top: -2px;
         background-color: rgba(#F2F2F2, 0.8);
         h4 {
             font-size: 1.8em;

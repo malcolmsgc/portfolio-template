@@ -6,7 +6,7 @@ const Nav = (props) => {
   return (
     <nav>
       <ul className="nav-list">
-        <a href="#">
+        <a href="#about">
           <li>About</li>
         </a>
         <a href="#gallery">
