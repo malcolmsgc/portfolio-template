@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi");
+* {
+  margin: 0;
+  padding: 0; }
+
+#root {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: #6b342d;
+  min-height: 100vh; }
+
+header {
+  /* Header flex container settings */
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  /* End flex grid container settings */
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 1em;
+  background: #000; }
+
+header div:first-of-type {
+  background: #fff;
+  flex: 1 1 35vw; }
+
+header p {
+  font-size: 1.4em;
+  padding: 1em; }
+
+header div:nth-of-type(2) {
+  flex: 1 2 640px;
+  text-align: center; }
+
+header img {
+  min-height: 100%; }
+
+nav {
+  background-color: #F2C94C;
+  font-size: 3.2em;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between; }
+
+nav ul {
+  list-style-type: none; }
+
+nav ul a {
+  text-decoration: none;
+  color: #000; }
+
+nav ul li {
+  display: inline; }
+
+.nav-list a:first-of-type {
+  margin-left: 0; }
+
+.nav-list a {
+  margin: 0 10px; }
+
+.nav-social a {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  border-radius: 100%;
+  padding: 5px;
+  margin: 5px 5px;
+  width: 40px;
+  height: 40px; }
+
+.nav-social a:hover {
+  background-color: #6b342d; }
+
+.nav-social li {
+  display: flex;
+  justify-content: center; }
+
+.nav-social li > * {
+  margin-top: 4px; }
+
+h1 {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 5em;
+  margin: 0.2em; }
+
+@media screen and (max-width: 650px) {
+  header img {
+    max-width: 100vw; } }
