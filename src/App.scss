@@ -5,6 +5,7 @@ $font1: 'Reem Kufi', sans-serif;
 $color1: rgb(107, 52, 45);
 $color2: #F2C94C;
 $accent-dark: #5C150B;
+$accent-light: rgb(209, 161, 29);
 // END VARS
 
 * {
@@ -164,6 +165,60 @@ h1 {
 
 h2,h3,h4 {
     font-family: $font1;
+}
+
+#skills {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        ". legend"
+        "skills skills"
+}
+
+#skill-legend {
+    grid-area: legend;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: $color2;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+    > * {
+        display: inline-block;
+    }
+}
+
+.skill-table {
+    grid-area: skills;
+    .skill {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid $accent-dark;
+        h3 {
+            font-size: 2.4em;
+            color: $color2;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        .skillbar {
+            background-color: #C4C4C4;
+            width: 78%;
+        }
+        .proficiency {
+            background-color: $accent-light;
+            width: 40%;
+            height: 100%;
+        }
+    }
+}
+
+#contact {
+    background: $color2;
 }
 
 @media screen and (max-width: 650px) {

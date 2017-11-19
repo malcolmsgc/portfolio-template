@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Contact = (props) => (
-  <section className="contact">
-    <p>Want to work together</p>
+  <section id="contact">
+    <p>Want to work together?</p>
     <p>{props.contactInfo.email}</p>
     <p>{props.contactInfo.location ? `Current location: ${props.contactInfo.location}` : ""}</p>
   </section>
