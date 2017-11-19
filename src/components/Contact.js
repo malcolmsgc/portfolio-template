@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-    );
-  }
-}
+const Contact = (props) => (
+  <section className="contact">
+    <p>Want to work together</p>
+    <p>{props.contactInfo.email}</p>
+    <p>{props.contactInfo.location ? `Current location: ${props.contactInfo.location}` : ""}</p>
+  </section>
+)
 
-export default App;
+
+
+
+export default Contact;

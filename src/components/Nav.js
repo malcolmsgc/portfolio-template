@@ -12,10 +12,10 @@ const Nav = (props) => {
         <a href="#gallery">
           <li>Work</li>
         </a>
-        <a href="#">
+        <a href="#skills">
           <li>Skills</li>
         </a>
-        <a href="#">
+        <a href="#contact">
           <li>Contact</li>
         </a>
       </ul>

@@ -55,6 +55,9 @@ nav ul a {
 nav ul li {
   display: inline; }
 
+.nav-list {
+  margin-top: 5px; }
+
 .nav-list a:first-of-type {
   margin-left: 5px; }
 
