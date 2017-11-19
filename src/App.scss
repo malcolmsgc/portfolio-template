@@ -219,6 +219,23 @@ h2,h3,h4 {
 
 #contact {
     background: $color2;
+    padding: 4em 0;
+    font-size: 2em;
+    div {
+        text-align: center;
+        font-family: $font1;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    a {
+        font-size: 1.5em;
+        text-decoration: none;
+        color: $color1;
+        &:hover {
+            color: $accent-light;
+        }
+    }
 }
 
 @media screen and (max-width: 650px) {

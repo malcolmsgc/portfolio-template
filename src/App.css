@@ -187,7 +187,24 @@ h2, h3, h4 {
   height: 100%; }
 
 #contact {
-  background: #F2C94C; }
+  background: #F2C94C;
+  padding: 4em 0;
+  font-size: 2em; }
+
+#contact div {
+  text-align: center;
+  font-family: "Reem Kufi", sans-serif; }
+
+#contact h3 {
+  font-size: 2em; }
+
+#contact a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #6b342d; }
+
+#contact a:hover {
+  color: #d1a11d; }
 
 @media screen and (max-width: 650px) {
   header img {

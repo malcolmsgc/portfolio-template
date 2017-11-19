@@ -2,9 +2,12 @@ import React from 'react';
 
 const Contact = (props) => (
   <section id="contact">
-    <p>Want to work together?</p>
-    <p>{props.contactInfo.email}</p>
-    <p>{props.contactInfo.location ? `Current location: ${props.contactInfo.location}` : ""}</p>
+    <div>
+      <h3>Want to work together?</h3>
+      <a href={`mailto:${props.contactInfo.email}`}>{props.contactInfo.email}</a>
+      <p><em>{props.contactInfo.location ? `Current location: ${props.contactInfo.location}` : ""}</em></p>
+    </div>
+
   </section>
 )
 
