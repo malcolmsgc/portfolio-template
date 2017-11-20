@@ -49,14 +49,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="app-wrapper">
         <Header about={this.state.profile}/>
         <Nav contactInfo={this.state.contactInfo} />
         <Gallery gallery={this.state.gallery}/>
         <Skills skills={this.state.skills}/>
         <Contact contactInfo={this.state.contactInfo} />
       </div>
-
     );
   }
 }

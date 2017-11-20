@@ -22,8 +22,22 @@ $accent-light: rgb(209, 161, 29);
     max-width: 100vw;
 }
 
+#app-wrapper {
+    display : grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "about"
+        "nav" 
+        "work" 
+        "skills" 
+        "contact"; 
+
+}
+
 
 header {
+    grid-area: about;
     /* Header flex container settings */
     display: flex;
     flex-wrap: wrap-reverse;
@@ -52,11 +66,13 @@ header {
 }
 
 nav {
+    grid-area: nav;
     background-color: $color2;
     font-size: 3.2em;
     padding: 0.5rem;
     min-height: 60px;
     display: flex;
+    flex-flow: row wrap-reverse;
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -74,6 +90,7 @@ nav {
 }
 
 .nav-list {
+    display: inline-block;
     margin-top: 5px;
     a:first-of-type {
         margin-left: 5px;
@@ -82,7 +99,15 @@ nav {
         margin: 0 10px;
         &:hover {
             color: $accent-dark;
-          }
+        }
+        &.active {
+            li {
+                position: relative;
+                top: 5px;
+                border-bottom: 3px solid #000;
+                // transform: translateY(10px);
+            }
+        }
     }
 }
 
@@ -116,12 +141,14 @@ h1 {
 }
 
 #gallery {
+    grid-area: work;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
     max-width: 100vw;
-    margin: 20px auto 0;
+    padding-top: 40px;
+    margin: 0 auto 40px;
     &:after {
         content: "";
         flex: 0 1 390px; //flex-item + margins
@@ -171,13 +198,22 @@ h2,h3,h4 {
 }
 
 #skills {
-    margin: 40px;
+    grid-area: skills;
+    margin: 20px 40px 40px;
+    padding-top: 70px;
+    border-top: 1px solid $color2;
     display: grid;
     grid-template-columns: 2fr 7fr;
     grid-template-rows: auto auto;
     grid-template-areas:
         ". legend"
-        "skills skills"
+        "skills skills";
+    h2 {
+        color: $color2;
+        letter-spacing: 1px;
+        font-size: 2.8em;
+        text-decoration: underline;
+    }
 }
 
 #skill-legend {
@@ -221,6 +257,7 @@ h2,h3,h4 {
 }
 
 #contact {
+    grid-area: contact;
     background: $color2;
     padding: 4em 0;
     font-size: 2em;
@@ -241,9 +278,30 @@ h2,h3,h4 {
     }
 }
 
+@media screen and (max-width: 995px) {
+    
+    #app-wrapper {
+        grid-auto-columns: 1fr;
+        grid-auto-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "nav" 
+            "about"
+            "work" 
+            "skills" 
+            "contact"; 
+    }
+}
+
 @media screen and (max-width: 650px) {
     
     header img {
         max-width: 100vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    #skill-legend {
+        visibility: hidden;
     }
 }

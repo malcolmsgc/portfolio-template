@@ -3,6 +3,7 @@ import Skill from './Skill';
 
 const Skills = (props) => (
     <section id="skills">
+      <h2>Skills</h2>
       <div id="skill-legend">
         <h4>Beginner</h4>
         <h4>Comfortable</h4>
