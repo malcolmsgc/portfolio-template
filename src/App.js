@@ -18,7 +18,7 @@ class App extends Component {
     this.state = {
       profile: {
         title: "",
-        about: ``,
+        about: null, // Must be jsx. <p> tags necessary for styling
         imgSrc: "",
       },
       contactInfo: {
@@ -29,14 +29,14 @@ class App extends Component {
         location: "Utopia",
       },
       gallery : [
-        {title: "Pomodoro Timer", src : "", url : "https://twitter.com/MalcolmCumming", caption: "captions are great"},
-        {title: "Tic Tac Toe Game", src : "", url : "#", caption: "captions are great captions are great captions are great captions are great captions are great captions are great captions are great captions are great"},
-        {title: "Wikipedia Viewer", src : "", url : "#", caption: "captions are great"},
-        {title: "Simon Game", src : "", url : "#", caption: "captions are great"},
-        {title: "Calculator", src : "", url : "#", caption: "captions are great"},
+        {title: "Pomodoro Timer", src : "", url : "https://pomodoro-timer.now.sh/", caption: "captions are great"},
+        {title: "Tic Tac Toe Game", src : "", url : "https://tictactoe.now.sh/", caption: "captions are great captions are great captions are great captions are great captions are great captions are great captions are great captions are great"},
+        {title: "Wikipedia Viewer", src : "", url : "https://malcolmsgc.github.io/FCC-Wikipedia-Viewer/", caption: "captions are great"},
+        {title: "Simon Game", src : "", url : "https://simon-game.now.sh/", caption: "captions are great"},
+        {title: "Calculator", src : "", url : "https://simple-calculator.now.sh/", caption: "captions are great"},
         {title: "Weather applet", src : "", url : "#", caption: "captions are great"},
-        {title: "Decimal to Roman Numeral Converter", src : "", url : "#", caption: "captions are great"},
-        {title: "Twitch Channel Monitor", src : "", url : "#", caption: "captions are great"},
+        {title: "Decimal to Roman Numeral Converter", src : "", url : "https://codepen.io/malcolmsgc/full/EmWpoM/", caption: "captions are great"},
+        {title: "Twitch Channel Monitor", src : "", url : "https://malcolmsgc.github.io/FCC-Twitch-Viewer/", caption: "captions are great"},
       ],
       skills : [
         { skill: "Skill A", proficiency: 100 },
