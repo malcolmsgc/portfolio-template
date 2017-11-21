@@ -16,8 +16,8 @@ class Gallery extends Component {
       updateRef() {
         const sectionRefs = this.props.sectionRefs;
         // sectionRefs.work = this.workRef.offsetTop;
-        let heightStr = (/\d+/).exec(window.getComputedStyle(this.workRef).height)[0];
-        sectionRefs.workHeight = parseInt(heightStr, 10);
+        let heightArr = (/\d+/).exec(window.getComputedStyle(this.workRef).height) || "0";
+        sectionRefs.workHeight = parseInt(heightArr[0], 10);
         this.setState({ sectionRefs });
       }
 

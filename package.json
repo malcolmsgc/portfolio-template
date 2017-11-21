@@ -2,6 +2,7 @@
   "name": "demo-portfolio",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://malcolmsgc.github.io/portfolio-template/",
   "dependencies": {
     "lodash.throttle": "^4.1.1",
     "react": "^16.1.1",

@@ -16,8 +16,8 @@ class Header extends Component {
       updateRef() {
         const sectionRefs = this.props.sectionRefs;
         // sectionRefs.about = this.aboutRef.offsetTop;
-        let heightStr = (/\d+/).exec(window.getComputedStyle(this.aboutRef).height)[0];
-        sectionRefs.aboutHeight = parseInt(heightStr, 10);
+        let heightArr = (/\d+/).exec(window.getComputedStyle(this.aboutRef).height) || "0";
+        sectionRefs.aboutHeight = parseInt(heightArr[0], 10);
         this.setState({ sectionRefs });
       }
 

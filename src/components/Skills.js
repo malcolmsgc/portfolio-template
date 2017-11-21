@@ -18,8 +18,8 @@ class Skills extends Component {
   updateRef() {
     const sectionRefs = this.props.sectionRefs;
     // sectionRefs.skills = this.skillsRef.offsetTop;
-    let heightStr = (/\d+/).exec(window.getComputedStyle(this.skillsRef).height)[0];
-    sectionRefs.skillsHeight = parseInt(heightStr, 10);
+    let heightArr = (/\d+/).exec(window.getComputedStyle(this.skillsRef).height) || "0";
+    sectionRefs.skillsHeight = parseInt(heightArr[0], 10);
     this.setState({ sectionRefs });
   }
 
