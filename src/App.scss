@@ -111,7 +111,7 @@ nav {
     }
 }
 
-.nav-social {
+.social {
   a {
       display: inline-block;
       background-color: #000;
@@ -276,6 +276,13 @@ h2,h3,h4 {
             color: $accent-light;
         }
     }
+    .social {
+        padding: 0.5em;
+        a {
+            background-color: #000;
+            color: #fff;
+        }
+    }
 }
 
 @media screen and (max-width: 995px) {
@@ -303,5 +310,16 @@ h2,h3,h4 {
     
     #skill-legend {
         visibility: hidden;
+    }
+    nav {
+        font-size: 2.5em;
+        .nav-list {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .social {
+            display: none;
+        }
     }
 }

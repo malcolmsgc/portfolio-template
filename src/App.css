@@ -84,7 +84,7 @@ nav ul li {
   top: 5px;
   border-bottom: 3px solid #000; }
 
-.nav-social a {
+.social a {
   display: inline-block;
   background-color: #000;
   color: #fff;
@@ -94,14 +94,14 @@ nav ul li {
   width: 40px;
   height: 40px; }
 
-.nav-social a:hover {
+.social a:hover {
   background-color: #5C150B; }
 
-.nav-social li {
+.social li {
   display: flex;
   justify-content: center; }
 
-.nav-social li > * {
+.social li > * {
   margin-top: 4px; }
 
 h1 {
@@ -235,6 +235,13 @@ h2, h3, h4 {
 #contact a:hover {
   color: #d1a11d; }
 
+#contact .social {
+  padding: 0.5em; }
+
+#contact .social a {
+  background-color: #000;
+  color: #fff; }
+
 @media screen and (max-width: 995px) {
   #app-wrapper {
     grid-auto-columns: 1fr;
@@ -247,4 +254,12 @@ h2, h3, h4 {
 
 @media screen and (max-width: 500px) {
   #skill-legend {
-    visibility: hidden; } }
+    visibility: hidden; }
+  nav {
+    font-size: 2.5em; }
+  nav .nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  nav .social {
+    display: none; } }

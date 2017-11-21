@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Skill from './Skill';
 
-const Skills = (props) => (
-    <section id="skills">
+
+
+class Skills extends Component {
+
+  componentDidMount() {
+    this.updateRef();
+  }
+
+  componentDidUpdate() {
+    if (this.props.sectionRefs.needsUpdate === true) {
+      this.updateRef();
+    }
+  }
+
+  updateRef() {
+    const sectionRefs = this.props.sectionRefs;
+    // sectionRefs.skills = this.skillsRef.offsetTop;
+    let heightStr = (/\d+/).exec(window.getComputedStyle(this.skillsRef).height)[0];
+    sectionRefs.skillsHeight = parseInt(heightStr, 10);
+    this.setState({ sectionRefs });
+  }
+
+
+  render() {
+    return (
+    <section id="skills" ref={(section) => this.skillsRef = section}>
       <h2>Skills</h2>
       <div id="skill-legend">
         <h4>Beginner</h4>
@@ -11,15 +35,18 @@ const Skills = (props) => (
         <h4>Yoda</h4>
       </div>
       <div className="skill-table">
-     { props.skills.map(
+     { this.props.skills.map(
         (skill, i) => {
-         const { skill: name, proficiency } = props.skills[i];
+         const { skill: name, proficiency } = this.props.skills[i];
         return (
           <Skill key={i} skill={name} proficiency={proficiency} />
         );
       })}
       </div>
-    </section> );
+    </section> 
+    );
+  }
+}
     
 
 

@@ -6,7 +6,7 @@ import Nav from "./components/Nav"
 import Gallery from "./components/Gallery"
 import Skills from "./components/Skills"
 import Contact from "./components/Contact"
-import logo from './logo.svg';
+import throttle from 'lodash.throttle';
 import './App.css';
 
 
@@ -15,6 +15,7 @@ class App extends Component {
 
   constructor() {
     super();
+    this.updateRefonResize = this.updateRefonResize.bind(this);
     this.state = {
       profile: {
         title: "",
@@ -34,7 +35,7 @@ class App extends Component {
         {title: "Wikipedia Viewer", src : "", url : "https://malcolmsgc.github.io/FCC-Wikipedia-Viewer/", caption: "captions are great"},
         {title: "Simon Game", src : "", url : "https://simon-game.now.sh/", caption: "captions are great"},
         {title: "Calculator", src : "", url : "https://simple-calculator.now.sh/", caption: "captions are great"},
-        {title: "Weather applet", src : "", url : "#", caption: "captions are great"},
+        {title: "Weather applet", src : "", url : "https://malcolmsgc.github.io/weather-applet/", caption: "captions are great"},
         {title: "Decimal to Roman Numeral Converter", src : "", url : "https://codepen.io/malcolmsgc/full/EmWpoM/", caption: "captions are great"},
         {title: "Twitch Channel Monitor", src : "", url : "https://malcolmsgc.github.io/FCC-Twitch-Viewer/", caption: "captions are great"},
       ],
@@ -43,18 +44,37 @@ class App extends Component {
         { skill: "Skill B", proficiency: 25 },
         { skill: "Skill C", proficiency: 60 },
         { skill: "Skill D", proficiency: 85 },
-      ]
+      ],
+      sectionRefs : {
+        needsUpdate: false,
+        aboutHeight : null,
+        workHeight : null,
+        skillsHeight : null,
+        contactHeight : null,
+      }
     };
+    // END OF CONSTRUCTOR
   }
+
+  componentDidMount() {
+    window.addEventListener('resize', throttle( () => this.updateRefonResize() , 200) );
+    window.setTimeout(this.updateRefonResize, 250); // 2nd run as gives incorrect sizes on render prob because gives values before CGSS grid kicks in.
+  }
+
+  updateRefonResize() {
+    const sectionRefs = {...this.state.sectionRefs};
+    sectionRefs.needsUpdate = true;
+    this.setState({ sectionRefs });
+}
 
   render() {
     return (
       <div id="app-wrapper">
-        <Header about={this.state.profile}/>
-        <Nav contactInfo={this.state.contactInfo} />
-        <Gallery gallery={this.state.gallery}/>
-        <Skills skills={this.state.skills}/>
-        <Contact contactInfo={this.state.contactInfo} />
+        <Header about={this.state.profile} sectionRefs={this.state.sectionRefs}/>
+        <Nav contactInfo={this.state.contactInfo} updateRefs={this.updateRefonResize} sectionRefs={this.state.sectionRefs}/>
+        <Gallery gallery={this.state.gallery} sectionRefs={this.state.sectionRefs}/>
+        <Skills skills={this.state.skills} sectionRefs={this.state.sectionRefs}/>
+        <Contact contactInfo={this.state.contactInfo} sectionRefs={this.state.sectionRefs}/>
       </div>
     );
   }
