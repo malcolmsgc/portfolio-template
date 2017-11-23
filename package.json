@@ -2,7 +2,7 @@
   "name": "demo-portfolio",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://github.com/malcolmsgc/portfolio-template/",
+  "homepage": "https://malcolmsgc.github.io/portfolio-template/",
   "dependencies": {
     "lodash.throttle": "^4.1.1",
     "react": "^16.1.1",
@@ -17,7 +17,7 @@
     "sasquatch": "node-sass --watch src -o src",
     "sass": "node-sass src -o src",
     "dvlp": "concurrently \"yarn sasquatch\" \"yarn start\"",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
